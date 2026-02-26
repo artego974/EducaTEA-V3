@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 13dvh;
+}
+.enabled {
+  z-index: 9999 !important;
+}
+/* Garante que o container do VLibras seja visível */
+.enabled.vw-plugin-top-wrapper {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 999999 !important;
+}
+
+/* Força o botão de acesso a aparecer no canto direito */
+[vw-access-button] {
+  display: block !important;
+  position: fixed !important;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999999;
+}
+/* Força o botão lateral a aparecer */
+.vw-plugin-top-wrapper, 
+[vw-access-button], 
+.access-button {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 999999 !important;
+}
+
+/* Garante que o bonequinho (widget aberto) fique na frente de tudo */
+.vp-container {
+  z-index: 999999 !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Se você usa Tailwind, às vezes o 'antialiased' no body mexe com fontes do widget. 
+   Isso garante que o container do player tenha tamanho */
+div[vw] {
+  position: fixed;
+  z-index: 999999;
+}
