@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "tsc next build",
-    "dev": "npx ts-node-dev src/server.ts next dev",
+    "dev": "npx ts-node-dev backend/src/server.ts next dev",
     "start": "next start"
   },
   "keywords": [],
