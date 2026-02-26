@@ -18,10 +18,12 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
+      "http://localhost:3001",
       "http://127.0.0.1:3000",
       "http://127.0.0.1:5500",
       "https://educa-tea.vercel.app/"
     ],
+    credentials: true
   })
 );
 
@@ -35,6 +37,6 @@ AppDataSource.initialize()
     app.use(ComentarioRoutes);
     app.use(UserRoutes);
 
-    app.listen(3000, () => console.log('Server rodando na porta 3000'));
+    app.listen(3001, () => console.log('Server rodando na porta 3001'));
   })
   .catch((error) => console.log(error));
